@@ -5,10 +5,8 @@ import { getProjects } from "@/sanity/sanity-utils";
 export default async function Home() {
   const projects = await getProjects();
 
-  console.log(projects);
-
   return (
-    <div className="max-w-5xl mx-auto text">
+    <>
       <h1>
         Hi there, I&apos;m{" "}
         <span className="bg-gradient-to-r from-blue-400 via-purple-800 to-blue-600 bg-clip-text text-transparent">
@@ -41,12 +39,10 @@ export default async function Home() {
               />
             )}
             {/* name */}
-            <h3 className="bg-gradient-to-r from-blue-400 via-purple-800 to-blue-600 bg-clip-text text-transparent">
-              {project.name}
-            </h3>
+            <h3 className="title-gradient">{project.name}</h3>
           </Link>
         ))}
       </div>
-    </div>
+    </>
   );
 }
