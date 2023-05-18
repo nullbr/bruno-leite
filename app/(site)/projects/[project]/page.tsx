@@ -36,6 +36,7 @@ const Project = async ({ params }: Props) => {
           alt={slug}
           width={1920}
           height={1080}
+          priority={true}
           className="mt-10 border-2 border-gray-700 object-cover rounded-xl"
         />
       </main>
