@@ -18,10 +18,12 @@ export default async function RootLayout({
   // get all configured pages
   const pages = await getPages();
 
+  console.log(pages);
+
   return (
     <html lang="en">
       <body className={inter.className}>
-        <header className="blur-bg">
+        <nav className="blur-bg">
           <div className=" flex items-center justify-between max-w-3xl mx-auto py-4">
             {/* Root Link */}
             <div className="">
@@ -37,12 +39,12 @@ export default async function RootLayout({
                   key={page._id}
                   className="text-base hover:underline"
                 >
-                  {page.title}
+                  {page.titleEn}
                 </Link>
               ))}
             </div>
           </div>
-        </header>
+        </nav>
         <main className="max-w-3xl mx-auto py-10">{children}</main>
       </body>
     </html>

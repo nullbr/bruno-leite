@@ -1,11 +1,16 @@
 const page = {
   name: "page",
-  title: "Page",
+  title: "Pages",
   type: "document",
   fields: [
     {
-      name: "title",
-      title: "Title",
+      name: "titleEn",
+      title: "Title English",
+      type: "string",
+    },
+    {
+      name: "titlePt",
+      title: "Title Portuguese",
       type: "string",
     },
     {
@@ -13,15 +18,20 @@ const page = {
       title: "Slug",
       type: "slug",
       options: {
-        source: "title",
+        source: "titleEn",
         maxLength: 96,
       },
     },
     {
-      name: "content",
-      title: "content",
+      name: "description",
+      title: "Description",
       type: "array",
       of: [{ type: "block" }],
+    },
+    {
+      name: "position",
+      title: "Position",
+      type: "number",
     },
   ],
 };

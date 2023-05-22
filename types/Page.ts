@@ -3,7 +3,9 @@ import { PortableTextBlock } from "sanity";
 export type Page = {
   _id: string;
   _createdAt: Date;
-  title: string;
+  titleEn: string;
+  titlePt: string;
   slug: string;
-  content: PortableTextBlock[];
+  description: PortableTextBlock[];
+  position: number;
 };

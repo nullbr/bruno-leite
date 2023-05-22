@@ -37,12 +37,14 @@ export async function getProject(slug: string): Promise<Project> {
 
 export async function getPages(): Promise<Page[]> {
   return createClient(config).fetch(
-    groq`*[_type == "page"]{
+    groq`*[_type == "page"] | order(position asc){
       _id,
       _createdAt,
-      name,
+      titleEn,
+      titlePt,
       "slug": slug.current,
-      title
+      description,
+      position
     }`
   );
 }
@@ -52,12 +54,12 @@ export async function getPage(slug: string): Promise<Page> {
     groq`*[_type == "page" && slug.current == $slug][0]{
       _id,
       _createdAt,
-      name,
+      titleEn,
+      titlePt,
+      description,
       "slug": slug.current,
-      title,
-      content
-    }
-    `,
+      position
+    }`,
     { slug }
   );
 }

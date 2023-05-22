@@ -12,9 +12,9 @@ const Page = async ({ params }: Params) => {
 
   return (
     <>
-      <h1 className="title-gradient mb-10">{page.title}</h1>
+      <h1 className="title-gradient mb-10">{page.titleEn}</h1>
 
-      <PortableText value={page.content} />
+      <PortableText value={page.description} />
     </>
   );
 };
