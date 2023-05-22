@@ -31,9 +31,4 @@
     ); /* Set the background color with transparency */
     backdrop-filter: blur(8px); /* Add a blur filter to the navbar */
   }
-
-  .gradient-bg {
-    background-color: #4d4855;
-    background-image: linear-gradient(147deg, #4d4855 0%, #000000 74%);
-  }
 }

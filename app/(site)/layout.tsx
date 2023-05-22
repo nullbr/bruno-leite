@@ -1,6 +1,6 @@
 import "../global.css";
 import { Analytics } from "../components/analytics";
-import { getPages } from "@/sanity/sanity-utils";
+// import { getPages } from "@/sanity/sanity-utils";
 import { data, inter, calSans } from "@/util/metadata";
 
 export const metadata = data;
@@ -42,8 +42,8 @@ export default async function RootLayout({
       </body> */}
 
       <body
-        className={`bg-black ${
-          process.env.NODE_ENV === "development" ? "debug-screens" : undefined
+        className={`bg-black bg-gradient-to-tl from-black via-cyan-800/10 to-black ${
+          process.env.NODE_ENV === "development" ? "debug-screens" : ""
         }`}
       >
         {children}
