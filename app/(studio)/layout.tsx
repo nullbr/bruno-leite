@@ -1,12 +1,11 @@
 import { Inter } from "next/font/google";
 import "../global.css";
+import { Analytics } from "../components/analytics";
+import { data } from "@/util/metadata";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata = {
-  title: "Bruno Leite Portfolio",
-  description: "Bruno Leite - Full Stack Developer",
-};
+export const metadata = data;
 
 export default function RootLayout({
   children,
@@ -15,6 +14,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <Analytics />
+      </head>
       <body className={inter.className}>
         <main>{children}</main>
       </body>

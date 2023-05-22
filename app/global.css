@@ -3,34 +3,21 @@
 @tailwind utilities;
 
 @layer base {
-  body {
-    @apply bg-slate-200 text-black;
-  }
-
-  h1 {
-    @apply text-5xl font-extrabold;
-  }
-
-  h2 {
-    @apply font-bold text-gray-700 text-3xl;
-  }
-
-  p,
-  a {
-    @apply text-lg text-gray-500;
+  .text-edge-outline {
+    -webkit-text-stroke: 1px rgba(6, 182, 212, 0.3);
   }
 }
 
 @layer components {
   .title-gradient {
-    @apply bg-gradient-to-r from-blue-400 via-blue-800 to-blue-600 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-blue-700 via-cyan-500 to-green-400 bg-clip-text text-transparent;
   }
 
   .btn-primary {
-    @apply bg-gray-100 rounded-lg text-gray-500 font-bold py-3 px-4 
-    whitespace-nowrap hover:bg-blue-600 hover:text-white 
-    transition duration-300 shadow-lg
-    hover:scale-105;
+    @apply whitespace-nowrap rounded-lg bg-gray-100 px-4 py-3 font-bold 
+    text-gray-500 shadow-lg transition 
+    duration-300 hover:scale-105 hover:bg-blue-600
+    hover:text-white;
   }
 }
 
@@ -43,5 +30,10 @@
       0.6
     ); /* Set the background color with transparency */
     backdrop-filter: blur(8px); /* Add a blur filter to the navbar */
+  }
+
+  .gradient-bg {
+    background-color: #4d4855;
+    background-image: linear-gradient(147deg, #4d4855 0%, #000000 74%);
   }
 }
