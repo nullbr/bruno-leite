@@ -42,7 +42,7 @@ export default async function RootLayout({
       </body> */}
 
       <body
-        className={`bg-black bg-gradient-to-tl from-black via-cyan-800/10 to-black ${
+        className={`min-h-screen bg-black bg-gradient-to-tl from-black via-cyan-800/10 to-black ${
           process.env.NODE_ENV === "development" ? "debug-screens" : ""
         }`}
       >

@@ -77,7 +77,7 @@ export default async function Home() {
 
         <div className="animate-glow hidden h-px w-screen animate-fade-left md:block" />
 
-        <h1 className="title-gradient text-edge-outline z-10 animate-title cursor-default whitespace-nowrap font-display text-4xl duration-1000 sm:text-6xl md:text-9xl ">
+        <h1 className="title-gradient text-edge-outline z-10 animate-title cursor-default whitespace-nowrap font-display text-[6rem] duration-1000 sm:text-[8rem] md:text-[10rem] ">
           nullbr
         </h1>
 
