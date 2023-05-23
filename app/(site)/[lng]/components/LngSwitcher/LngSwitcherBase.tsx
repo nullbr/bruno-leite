@@ -3,13 +3,12 @@ import { TFunction } from "i18next";
 import GB from "country-flag-icons/react/3x2/GB";
 import BR from "country-flag-icons/react/3x2/BR";
 
-interface FooterBaseProps {
-  t: TFunction;
+interface LngSwitcherProps {
   lng: string;
 }
 
-const FooterBase = ({ t, lng }: FooterBaseProps) => {
-  const transContent =
+const LngSwitcherBase = ({ lng }: LngSwitcherProps) => {
+const transContent =
     lng === "en" ? (
       <GB title="English" className="..." />
     ) : (
@@ -34,4 +33,4 @@ const FooterBase = ({ t, lng }: FooterBaseProps) => {
   );
 };
 
-export default FooterBase;
+export default LngSwitcherBase;

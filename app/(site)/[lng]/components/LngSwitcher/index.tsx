@@ -1,5 +1,5 @@
 import { useTranslation } from "../../../../i18n";
-import FooterBase from "./FooterBase";
+import LngSwitcherBase from "./LngSwitcherBase";
 
 interface FooterProps {
   lng: string;
@@ -8,7 +8,7 @@ interface FooterProps {
 const Footer = async ({ lng }: FooterProps) => {
   const { t } = await useTranslation(lng);
 
-  return <FooterBase t={t} lng={lng} />;
+  return <LngSwitcherBase lng={lng} />;
 };
 
 export default Footer;

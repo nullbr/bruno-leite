@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { getPages } from "@/sanity/sanity-utils";
 import { Github, Mail, Linkedin } from "lucide-react";
-import Footer from "./components/Footer/client";
+import LngSwitcherBase from "./components/LngSwitcher/client";
 import { useTranslation } from "@/app/i18n/";
 import { Trans } from "react-i18next";
 
@@ -114,7 +114,7 @@ export default async function Home({ params: { lng } }: Props) {
               </>
             ))}
           </div>
-          <Footer lng={lng} />
+          <LngSwitcherBase lng={lng} />
         </div>
       </div>
     </>

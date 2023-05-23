@@ -1,6 +1,6 @@
 "use client";
 
-import FooterBase from "./FooterBase";
+import LngSwitcherBase from "./LngSwitcherBase";
 import { useTranslation } from "../../../../i18n/client";
 
 interface FooterProps {
@@ -9,7 +9,7 @@ interface FooterProps {
 
 const Footer = ({ lng }: FooterProps) => {
   const { t } = useTranslation(lng);
-  return <FooterBase t={t} lng={lng} />;
+  return <LngSwitcherBase lng={lng} />;
 };
 
 export default Footer;
