@@ -69,12 +69,6 @@ export default async function Home({ params: { lng } }: PageProps) {
         <nav className="my-16 animate-fade-in">
           <ul className="flex items-center justify-center gap-4">
             <Link
-              href="/"
-              className="text-sm text-neutral-400 duration-500 hover:scale-105 hover:text-cyan-500"
-            >
-              {t("home.title")}
-            </Link>
-            <Link
               href="/about"
               className="text-sm text-neutral-400 duration-500 hover:scale-105 hover:text-cyan-500"
             >

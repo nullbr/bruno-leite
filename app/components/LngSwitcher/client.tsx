@@ -7,9 +7,9 @@ interface FooterProps {
   lng: string;
 }
 
-const Footer = ({ lng }: FooterProps) => {
+const LngSwitcher = ({ lng }: FooterProps) => {
   const { t } = useTranslation(lng);
   return <LngSwitcherBase lng={lng} />;
 };
 
-export default Footer;
+export default LngSwitcher;

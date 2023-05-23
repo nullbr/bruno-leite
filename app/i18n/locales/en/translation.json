@@ -1,16 +1,16 @@
 {
   "home": {
-    "title": "Home",
+    "title": "Inicio",
     "description": "Hello! I'm Bruno Leite, a dedicated full stack developer with expertise in Ruby on Rails, React, and PostgreSQL. With a strong passion for crafting intelligent solutions, I thrive on tackling projects of all sizes."
   },
   "about": {
-    "title": "About",
-    "description": "I am a highly motivated and skilled developer with a deep passion for technology and a strong track record in tackling diverse and challenging projects.\n\nAs a Full Stack Developer, I excel at designing and implementing robust web applications and APIs. My expertise lies in utilizing a comprehensive tech stack that includes Ruby on Rails, HTML, CSS, JavaScript, ReactJS, PostgreSQL, and more. I have also successfully integrated these systems with various third-party APIs, such as Twilio, Stripe, Sidekiq, Sentry, and Sendinblue. Throughout my projects, I prioritize both leadership and productivity, ensuring timely deliveries and efficient collaboration.\n\nAs a Computer Science student, I continuously strive to enhance my theoretical knowledge and practical skills, keeping pace with the rapidly evolving technology landscape. I firmly believe in staying up-to-date to remain at the forefront of this dynamic industry.\n\nBeyond my professional pursuits, I indulge in diverse interests. When I'm not immersed in the world of tech, you can find me passionately learning to play the guitar, honing my skills in Brazilian Jiu-Jitsu, or dedicating time to work on my motorcycle. These hobbies bring balance to my life and fuel my creativity and drive.\n\nOverall, I am a dedicated and adaptable developer, consistently seeking new challenges and opportunities for growth. My passion for technology, combined with my commitment to excellence, enables me to deliver high-quality solutions that meet and exceed expectations."
+    "title": "Sobre",
+    "description": "Sou um desenvolvedor altamente motivado e qualificado, com uma profunda paixão por tecnologia e um forte histórico em lidar com projetos diversos e desafiadores.\n\nComo desenvolvedor Full Stack, me destaco em projetar e implementar aplicações web e APIs robustas. Minha experiência está na utilização de uma pilha de tecnologia abrangente que inclui Ruby on Rails, HTML, CSS, JavaScript, ReactJS, PostgreSQL e muito mais. Também integrei com sucesso esses sistemas com várias APIs de terceiros, como Twilio, Stripe, Sidekiq, Sentry e Sendinblue. Ao longo dos meus projetos, priorizo a liderança e a produtividade, garantindo entregas pontuais e colaboração eficiente.\n\nComo estudante de Ciência da Computação, eu me esforço continuamente para aprimorar meus conhecimentos teóricos e habilidades práticas, acompanhando o cenário de tecnologia em rápida evolução. Acredito firmemente em manter-me atualizado para permanecer na vanguarda desta indústria dinâmica.\n\nAlém das minhas atividades profissionais, entrego a interesses diversos. Quando não estou imerso no mundo da tecnologia, você pode me encontrar apaixonadamente aprendendo a tocar violão, aprimorando minhas habilidades no Jiu-Jitsu ou dedicando tempo para trabalhar em minha motocicleta. Esses hobbies trazem equilíbrio para minha vida e alimentam minha criatividade e motivação.\n\nNo geral, sou um desenvolvedor dedicado e adaptável, buscando consistentemente novos desafios e oportunidades de crescimento. Minha paixão por tecnologia, combinada com meu compromisso com a excelência, me permite entregar soluções de alta qualidade que atendem e superam as expectativas."
   },
   "projects": {
-    "title": "Projects"
+    "title": "Projetos"
   },
   "contact": {
-    "title": "Contact"
+    "title": "Contato"
   }
 }

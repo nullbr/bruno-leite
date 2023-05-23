@@ -5,10 +5,10 @@ interface FooterProps {
   lng: string;
 }
 
-const Footer = async ({ lng }: FooterProps) => {
+const LngSwitcher = async ({ lng }: FooterProps) => {
   const { t } = await useTranslation(lng);
 
   return <LngSwitcherBase lng={lng} />;
 };
 
-export default Footer;
+export default LngSwitcher;
