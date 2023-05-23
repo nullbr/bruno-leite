@@ -3,7 +3,7 @@ export const PageLayout = ({
   cls,
 }: {
   children: React.ReactNode;
-  cls: string;
+  cls?: string;
 }) => {
   return (
     <div className="mx-auto min-h-screen max-w-3xl animate-fade-right whitespace-pre-line px-4 py-20 text-neutral-400">
