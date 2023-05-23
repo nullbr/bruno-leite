@@ -109,7 +109,7 @@ export default async function Home({ params: { lng } }: PageProps) {
                   target="_blank"
                   className="duration-500 hover:scale-105 hover:text-cyan-500"
                 >
-                  <span className="">{s.icon}</span>{" "}
+                  <span>{s.icon}</span>{" "}
                 </Link>
               </>
             ))}
