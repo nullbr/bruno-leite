@@ -1,22 +1,16 @@
 import Link from "next/link";
-import { getPages } from "@/sanity/sanity-utils";
+// import { getPages } from "@/sanity/sanity-utils";
 import { Github, Mail, Linkedin } from "lucide-react";
-import LngSwitcherBase from "./components/LngSwitcher/client";
+import LngSwitcherBase from "../../components/LngSwitcher/client";
 import { useTranslation } from "@/app/i18n/";
-import { Trans } from "react-i18next";
+import { PageProps } from "@/types/PageProps";
 
-interface Props {
-  params: {
-    lng: string;
-  };
-}
-
-export default async function Home({ params: { lng } }: Props) {
+export default async function Home({ params: { lng } }: PageProps) {
   const { t } = await useTranslation(lng);
 
   // const projects = await getProjects();
   // get all configured pages
-  const pages = await getPages();
+  // const pages = await getPages();
 
   const socials = [
     {
@@ -74,15 +68,30 @@ export default async function Home({ params: { lng } }: Props) {
       <div className="flex h-screen w-screen flex-col items-center justify-center overflow-hidden">
         <nav className="my-16 animate-fade-in">
           <ul className="flex items-center justify-center gap-4">
-            {pages.map((page) => (
-              <Link
-                key={page._id}
-                href={page?.slug || ""}
-                className="text-sm text-neutral-400 duration-500 hover:scale-105 hover:text-cyan-500"
-              >
-                {page.titleEn}
-              </Link>
-            ))}
+            <Link
+              href="/"
+              className="text-sm text-neutral-400 duration-500 hover:scale-105 hover:text-cyan-500"
+            >
+              {t("home.title")}
+            </Link>
+            <Link
+              href="/about"
+              className="text-sm text-neutral-400 duration-500 hover:scale-105 hover:text-cyan-500"
+            >
+              {t("about.title")}
+            </Link>
+            <Link
+              href="/projects"
+              className="text-sm text-neutral-400 duration-500 hover:scale-105 hover:text-cyan-500"
+            >
+              {t("projects.title")}
+            </Link>
+            <Link
+              href="/contact"
+              className="text-sm text-neutral-400 duration-500 hover:scale-105 hover:text-cyan-500"
+            >
+              {t("contact.title")}
+            </Link>
           </ul>
         </nav>
 
@@ -95,11 +104,8 @@ export default async function Home({ params: { lng } }: Props) {
         <div className="animate-glow hidden h-px w-screen animate-fade-right md:block" />
 
         <div className="my-16 animate-fade-in text-center text-neutral-400">
-          <h2 className="max-w-2xl px-2 text-base">
-            {t("home.description", {
-              name: <span className="title-gradient">Bruno Leite</span>,
-            })}
-          </h2>
+          {/* Description */}
+          <h2 className="max-w-2xl px-2 text-base">{t("home.description")}</h2>
 
           <div className="my-6 flex items-center justify-center gap-4">
             {socials.map((s) => (

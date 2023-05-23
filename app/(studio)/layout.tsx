@@ -1,6 +1,6 @@
 import { Inter } from "next/font/google";
 import "../global.css";
-import { Analytics } from "../(site)/[lng]/components/Analytics";
+import { Analytics } from "../components/Analytics";
 import { data } from "@/util/metadata";
 
 const inter = Inter({ subsets: ["latin"] });

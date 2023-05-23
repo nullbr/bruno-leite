@@ -1,5 +1,5 @@
 import "../../global.css";
-import { Analytics } from "./components/Analytics";
+import { Analytics } from "../../components/Analytics";
 // import { getPages } from "@/sanity/sanity-utils";
 import { data, inter, calSans } from "@/util/metadata";
 import { dir } from "i18next";

@@ -1,4 +1,4 @@
-import { useTranslation } from "../../../../i18n";
+import { useTranslation } from "../../i18n";
 import LngSwitcherBase from "./LngSwitcherBase";
 
 interface FooterProps {

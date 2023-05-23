@@ -1,7 +1,7 @@
 "use client";
 
 import LngSwitcherBase from "./LngSwitcherBase";
-import { useTranslation } from "../../../../i18n/client";
+import { useTranslation } from "../../i18n/client";
 
 interface FooterProps {
   lng: string;

@@ -1,5 +1,16 @@
 {
   "home": {
+    "title": "Home",
     "description": "Hello! I'm Bruno Leite, a dedicated full stack developer with expertise in Ruby on Rails, React, and PostgreSQL. With a strong passion for crafting intelligent solutions, I thrive on tackling projects of all sizes."
+  },
+  "about": {
+    "title": "About",
+    "description": "I am a highly motivated and skilled developer with a deep passion for technology and a strong track record in tackling diverse and challenging projects.\n\nAs a Full Stack Developer, I excel at designing and implementing robust web applications and APIs. My expertise lies in utilizing a comprehensive tech stack that includes Ruby on Rails, HTML, CSS, JavaScript, ReactJS, PostgreSQL, and more. I have also successfully integrated these systems with various third-party APIs, such as Twilio, Stripe, Sidekiq, Sentry, and Sendinblue. Throughout my projects, I prioritize both leadership and productivity, ensuring timely deliveries and efficient collaboration.\n\nAs a Computer Science student, I continuously strive to enhance my theoretical knowledge and practical skills, keeping pace with the rapidly evolving technology landscape. I firmly believe in staying up-to-date to remain at the forefront of this dynamic industry.\n\nBeyond my professional pursuits, I indulge in diverse interests. When I'm not immersed in the world of tech, you can find me passionately learning to play the guitar, honing my skills in Brazilian Jiu-Jitsu, or dedicating time to work on my motorcycle. These hobbies bring balance to my life and fuel my creativity and drive.\n\nOverall, I am a dedicated and adaptable developer, consistently seeking new challenges and opportunities for growth. My passion for technology, combined with my commitment to excellence, enables me to deliver high-quality solutions that meet and exceed expectations."
+  },
+  "projects": {
+    "title": "Projects"
+  },
+  "contact": {
+    "title": "Contact"
   }
 }
