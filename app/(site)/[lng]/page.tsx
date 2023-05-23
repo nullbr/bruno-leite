@@ -70,19 +70,19 @@ export default async function Home({ params: { lng } }: PageProps) {
           <ul className="flex items-center justify-center gap-4">
             <Link
               href="/about"
-              className="text-sm text-neutral-400 duration-500 hover:scale-105 hover:text-cyan-500"
+              className="text-sm text-neutral-400 duration-500 hover:scale-105 hover:text-primary"
             >
               {t("about.title")}
             </Link>
             <Link
               href="/projects"
-              className="text-sm text-neutral-400 duration-500 hover:scale-105 hover:text-cyan-500"
+              className="text-sm text-neutral-400 duration-500 hover:scale-105 hover:text-primary"
             >
               {t("projects.title")}
             </Link>
             <Link
               href="/contact"
-              className="text-sm text-neutral-400 duration-500 hover:scale-105 hover:text-cyan-500"
+              className="text-sm text-neutral-400 duration-500 hover:scale-105 hover:text-primary"
             >
               {t("contact.title")}
             </Link>
@@ -107,7 +107,7 @@ export default async function Home({ params: { lng } }: PageProps) {
                 <Link
                   href={s.href}
                   target="_blank"
-                  className="duration-500 hover:scale-105 hover:text-cyan-500"
+                  className="duration-500 hover:scale-105 hover:text-primary"
                 >
                   <span>{s.icon}</span>{" "}
                 </Link>

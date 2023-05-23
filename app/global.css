@@ -10,7 +10,7 @@
 
 @layer components {
   .title-gradient {
-    @apply bg-gradient-to-r from-blue-700 via-cyan-500 to-green-400 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-green-400 via-cyan-500 to-blue-500 bg-clip-text text-transparent;
   }
 
   .btn-primary {
