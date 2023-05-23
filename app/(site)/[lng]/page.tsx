@@ -1,23 +1,34 @@
 import Link from "next/link";
 import { getPages } from "@/sanity/sanity-utils";
 import { Github, Mail, Linkedin } from "lucide-react";
+import Footer from "./components/Footer/client";
+import { useTranslation } from "@/app/i18n/";
+import { Trans } from "react-i18next";
 
-export default async function Home() {
+interface Props {
+  params: {
+    lng: string;
+  };
+}
+
+export default async function Home({ params: { lng } }: Props) {
+  const { t } = await useTranslation(lng);
+
   // const projects = await getProjects();
   // get all configured pages
   const pages = await getPages();
 
   const socials = [
     {
-      icon: <Linkedin size={20} />,
+      icon: <Linkedin size={22} />,
       href: "https://www.linkedin.com/in/bruno-mariano-leite/",
     },
     {
-      icon: <Mail size={20} />,
+      icon: <Mail size={22} />,
       href: "mailto:bmarianoleite3@gmail.com",
     },
     {
-      icon: <Github size={20} />,
+      icon: <Github size={22} />,
       href: "https://github.com/nullbr",
     },
   ];
@@ -60,7 +71,7 @@ export default async function Home() {
           </Link>
         ))}
       </div> */}
-      <div className="flex h-screen w-screen flex-col items-center justify-center overflow-hidden bg-gradient-to-tl from-black via-neutral-600/20 to-black">
+      <div className="flex h-screen w-screen flex-col items-center justify-center overflow-hidden">
         <nav className="my-16 animate-fade-in">
           <ul className="flex items-center justify-center gap-4">
             {pages.map((page) => (
@@ -85,12 +96,12 @@ export default async function Home() {
 
         <div className="my-16 animate-fade-in text-center text-neutral-400">
           <h2 className="max-w-2xl px-2 text-base">
-            Hello! I'm <span className="title-gradient">Bruno Leite</span>, a
-            dedicated full stack developer with expertise in Ruby on Rails,
-            React, and PostgreSQL. With a strong passion for crafting
-            intelligent solutions, I thrive on tackling projects of all sizes.
+            {t("home.description", {
+              name: <span className="title-gradient">Bruno Leite</span>,
+            })}
           </h2>
-          <div className="m-6 flex items-center justify-center gap-4">
+
+          <div className="my-6 flex items-center justify-center gap-4">
             {socials.map((s) => (
               <>
                 <Link
@@ -98,11 +109,12 @@ export default async function Home() {
                   target="_blank"
                   className="duration-500 hover:scale-105 hover:text-cyan-500"
                 >
-                  <span className="h-12 w-12">{s.icon}</span>{" "}
+                  <span className="">{s.icon}</span>{" "}
                 </Link>
               </>
             ))}
           </div>
+          <Footer lng={lng} />
         </div>
       </div>
     </>
