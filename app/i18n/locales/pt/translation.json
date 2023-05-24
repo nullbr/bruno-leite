@@ -8,7 +8,8 @@
     "description": "Sou um desenvolvedor altamente motivado e qualificado, com uma profunda paixão por tecnologia e um forte histórico em lidar com projetos diversos e desafiadores.\n\nComo desenvolvedor Full Stack, me destaco em projetar e implementar aplicações web e APIs robustas. Minha experiência está na utilização de uma pilha de tecnologia abrangente que inclui Ruby on Rails, HTML, CSS, JavaScript, ReactJS, PostgreSQL e muito mais. Também integrei com sucesso esses sistemas com várias APIs de terceiros, como Twilio, Stripe, Sidekiq, Sentry e Sendinblue. Ao longo dos meus projetos, priorizo a liderança e a produtividade, garantindo entregas pontuais e colaboração eficiente.\n\nComo estudante de Ciência da Computação, eu me esforço continuamente para aprimorar meus conhecimentos teóricos e habilidades práticas, acompanhando o cenário de tecnologia em rápida evolução. Acredito firmemente em manter-me atualizado para permanecer na vanguarda desta indústria dinâmica.\n\nAlém das minhas atividades profissionais, entrego a interesses diversos. Quando não estou imerso no mundo da tecnologia, você pode me encontrar apaixonadamente aprendendo a tocar violão, aprimorando minhas habilidades no Jiu-Jitsu ou dedicando tempo para trabalhar em minha motocicleta. Esses hobbies trazem equilíbrio para minha vida e alimentam minha criatividade e motivação.\n\nNo geral, sou um desenvolvedor dedicado e adaptável, buscando consistentemente novos desafios e oportunidades de crescimento. Minha paixão por tecnologia, combinada com meu compromisso com a excelência, me permite entregar soluções de alta qualidade que atendem e superam as expectativas."
   },
   "projects": {
-    "title": "Projetos"
+    "title": "Projetos",
+    "description": "Confira alguns de meus projetos pessoais e profissionais. Os repositórios estão disponíveis no github e visualize a versão de produção."
   },
   "contact": {
     "title": "Contato"

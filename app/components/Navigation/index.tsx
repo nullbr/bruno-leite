@@ -8,9 +8,14 @@ import React, { useEffect, useRef, useState } from "react";
 interface Props {
   lng: string;
   pages: Array<"about" | "contact" | "projects">;
+  wide?: boolean;
 }
 
-export const Navigation: React.FC<Props> = ({ lng, pages }: Props) => {
+export const Navigation: React.FC<Props> = ({
+  lng,
+  pages,
+  wide = false,
+}: Props) => {
   const { t } = useTranslation(lng);
 
   const ref = useRef<HTMLElement>(null);
@@ -29,17 +34,20 @@ export const Navigation: React.FC<Props> = ({ lng, pages }: Props) => {
   return (
     <header ref={ref}>
       <div
-        className={`fixed inset-x-0 top-0 z-50 mx-auto max-w-3xl animate-fade-left border-b  backdrop-blur duration-200 ${
+        className={`fixed inset-x-0 top-0 z-50 mx-auto animate-fade-left border-b backdrop-blur duration-200 ${
+          wide ? "max-w-7xl" : "max-w-3xl"
+        } ${
           isIntersecting
             ? "border-transparent bg-neutral-900/0"
             : "bg-neutral-900/500  border-neutral-800 "
         }`}
       >
-        <div className="container mx-auto flex flex-row-reverse items-center justify-between px-4 py-6">
+        <div className="mx-auto flex flex-row-reverse items-center justify-between px-4 py-6">
           <div className="flex justify-between gap-4">
             {pages.map((page) => {
               return (
                 <Link
+                  key={page}
                   href={`/${page}`}
                   className="text-neutral-400 duration-500 hover:scale-105 hover:text-cyan-500"
                 >

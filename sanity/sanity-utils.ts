@@ -5,7 +5,7 @@ import { Page } from "@/types/Page";
 
 export async function getProjects(): Promise<Project[]> {
   return createClient(config).fetch(
-    groq`*[_type == "project"]{
+    groq`*[_type == "project"] {
       _id,
       _createdAt,
       name,
@@ -13,7 +13,9 @@ export async function getProjects(): Promise<Project[]> {
       "image": image.asset->url,
       repoUrl,
       viewUrl,
-      content
+      content,
+      featured,
+      date
     }`
   );
 }
@@ -28,7 +30,9 @@ export async function getProject(slug: string): Promise<Project> {
       "image": image.asset->url,
       repoUrl,
       viewUrl,
-      content
+      content,
+      featured,
+      date
     }
     `,
     { slug }

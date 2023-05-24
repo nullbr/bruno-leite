@@ -44,6 +44,16 @@ const project = {
       type: "array",
       of: [{ type: "block" }],
     },
+    {
+      name: "featured",
+      title: "Featured",
+      type: "boolean",
+    },
+    {
+      name: "date",
+      title: "Release Date",
+      type: "date",
+    },
   ],
 };
 

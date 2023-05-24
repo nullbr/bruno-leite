@@ -10,6 +10,7 @@ const LngSwitcherBase = ({ lng }: LngSwitcherProps) => {
     <div className="flex items-center justify-center gap-4">
       {languages.map((l) => (
         <Link
+          key={l}
           href={l === lng ? {} : `/${l}`}
           className="duration-500 hover:scale-110 hover:text-primary"
         >

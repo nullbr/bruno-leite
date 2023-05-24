@@ -9,4 +9,6 @@ export type Project = {
   repoUrl: string;
   viewUrl: string;
   content: PortableTextBlock[];
+  featured: boolean;
+  date: string;
 };
