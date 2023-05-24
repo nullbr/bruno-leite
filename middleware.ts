@@ -12,7 +12,11 @@ export const config = {
 const cookieName = "i18next";
 
 export function middleware(req: NextRequest) {
-  if (req.nextUrl.pathname.startsWith(`/admin`)) return;
+  if (
+    req.nextUrl.pathname.startsWith(`/admin`) ||
+    req.nextUrl.pathname.startsWith(`/api`)
+  )
+    return;
 
   let lng;
   if (req.cookies.has(cookieName))

@@ -45,7 +45,7 @@ const Page = async ({ params: { lng } }: PageProps) => {
     <>
       <Navigation lng={lng} pages={["about", "contact"]} wide={true} />
 
-      <div className="mx-auto max-w-7xl space-y-8 px-6 pb-24 pt-24 md:space-y-16 lg:px-8 lg:pb-8 lg:pt-32">
+      <div className="mx-auto max-w-7xl animate-fade-right space-y-8 px-6 pb-24 pt-24 md:space-y-16 lg:px-8 lg:pb-8 lg:pt-32">
         <div className="mx-auto max-w-2xl lg:mx-0">
           {/* title */}
           <h2 className="title-gradient text-3xl font-bold tracking-tight sm:text-4xl">
