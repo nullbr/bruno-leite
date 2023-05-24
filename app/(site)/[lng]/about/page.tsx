@@ -11,7 +11,7 @@ const Page = async ({ params: { lng } }: PageProps) => {
 
   return (
     <>
-      <Navigation lng={lng} />
+      <Navigation lng={lng} pages={["projects", "contact"]} />
       <PageLayout>
         {/* title */}
         <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl">

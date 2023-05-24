@@ -66,7 +66,7 @@ export default async function Home({ params: { lng } }: PageProps) {
         ))}
       </div> */}
       <div className="flex h-screen w-screen flex-col items-center justify-center overflow-hidden">
-        <nav className="my-16 animate-fade-in">
+        <nav className="mb-16 mt-4 animate-fade-in">
           <ul className="flex items-center justify-center gap-4">
             <Link
               href="/about"
@@ -97,7 +97,7 @@ export default async function Home({ params: { lng } }: PageProps) {
 
         <div className="animate-glow hidden h-px w-screen animate-fade-right md:block" />
 
-        <div className="my-16 animate-fade-in text-center text-neutral-400">
+        <div className="mb-4 mt-16 animate-fade-in text-center text-neutral-400">
           {/* Description */}
           <h2 className="max-w-2xl px-2 text-base">{t("home.description")}</h2>
 
