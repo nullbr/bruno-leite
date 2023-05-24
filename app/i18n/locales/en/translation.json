@@ -9,7 +9,8 @@
   },
   "projects": {
     "title": "Projects",
-    "description": "Check out some of my personal and professional projects. The repository is available on github and you can view the production version when available."
+    "description": "Check out some of my personal and professional projects. The repository is available on github and you can view the production version when available.",
+    "readMore": "Read More"
   },
   "contact": {
     "title": "Contact"

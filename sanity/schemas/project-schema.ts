@@ -41,20 +41,42 @@ const project = {
     {
       name: "content",
       title: "Content",
-      type: "array",
-      of: [{ type: "block" }],
-    },
-    {
-      name: "featured",
-      title: "Featured",
-      type: "boolean",
+      type: "document",
+      fields: [
+        {
+          name: "en",
+          title: "English",
+          type: "array",
+          of: [{ type: "block" }],
+        },
+        {
+          name: "pt",
+          title: "Portuguese",
+          type: "array",
+          of: [{ type: "block", title: "pt" }],
+        },
+      ],
     },
     {
       name: "date",
       title: "Release Date",
       type: "date",
     },
+    {
+      name: "featured",
+      title: "Featured Project?",
+      type: "boolean",
+    },
+    {
+      name: "main",
+      title: "Main Project?",
+      type: "boolean",
+    },
   ],
+  initialValue: {
+    featured: false,
+    main: false,
+  },
 };
 
 export default project;
