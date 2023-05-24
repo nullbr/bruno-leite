@@ -12,6 +12,8 @@ export const config = {
 const cookieName = "i18next";
 
 export function middleware(req: NextRequest) {
+  if (req.nextUrl.pathname.startsWith(`/admin`)) return;
+
   let lng;
   if (req.cookies.has(cookieName))
     lng = acceptLanguage.get(req.cookies?.get(cookieName)?.value);
