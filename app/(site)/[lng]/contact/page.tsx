@@ -31,7 +31,7 @@ const Page = async ({ params: { lng } }: PageProps) => {
 
   return (
     <>
-      <Navigation lng={lng} pages={["about", "projects"]} />
+      <Navigation lng={lng} pages={["about", "projects"]} wide={true} />
 
       <div className="container mx-auto flex min-h-screen animate-fade-right items-center justify-center px-4 pb-20 md:pb-0">
         <div className="mx-auto grid w-full grid-cols-1 gap-8 sm:mt-0 lg:grid-cols-3 xl:gap-16">

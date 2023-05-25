@@ -29,31 +29,6 @@ export default async function RootLayout({
       <head>
         <Analytics />
       </head>
-      {/* <body className={inter.className}>
-        <nav className="blur-bg">
-          <div className="flex items-center justify-between max-w-3xl mx-auto py-4">
-            
-            <div className="">
-              <Link href="/" className="title-gradient text-xl font-bold">
-                Bruno Leite
-              </Link>
-            </div>
-
-            <div className="flex gap-3 items-center">
-              {pages.map((page) => (
-                <Link
-                  href={`/${page?.slug ? page?.slug : ""}`}
-                  key={page._id}
-                  className="text-base hover:underline"
-                >
-                  {page.titleEn}
-                </Link>
-              ))}
-            </div>
-          </div>
-        </nav>
-        <main className="max-w-3xl mx-auto py-10">{children}</main>
-      </body> */}
 
       <body
         className={`min-h-screen bg-black bg-gradient-to-bl from-black via-cyan-800/30 to-black ${

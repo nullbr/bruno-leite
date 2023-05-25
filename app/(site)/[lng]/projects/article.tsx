@@ -12,7 +12,7 @@ type Props = {
 
 export const Article: React.FC<Props> = ({ project, views, lng }) => {
   return (
-    <Link href={`/projects/${project.slug}`}>
+    <Link href={`/${lng}/projects/${project.slug}`}>
       <article className="p-4 md:p-8">
         <div className="flex items-center justify-between gap-2">
           <div className="drop-shadow-orange text-xs text-neutral-200 duration-1000 group-hover:border-neutral-200 group-hover:text-white">

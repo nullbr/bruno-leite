@@ -1,7 +1,7 @@
 import Link from "next/link";
 // import { getPages } from "@/sanity/sanity-utils";
 import { Github, Mail, Linkedin } from "lucide-react";
-import LngSwitcherBase from "../../components/LngSwitcher/client";
+import LngSwitcher from "../../components/LngSwitcher/client";
 import { useTranslation } from "@/app/i18n/";
 import { PageProps } from "@/types/PageProps";
 import { getPages } from "@/sanity/sanity-utils";
@@ -78,7 +78,7 @@ export default async function Home({ params: { lng } }: PageProps) {
               </>
             ))}
           </div>
-          <LngSwitcherBase lng={lng} />
+          <LngSwitcher lng={lng} />
         </div>
       </div>
     </>

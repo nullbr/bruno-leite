@@ -48,7 +48,7 @@ export const Navigation: React.FC<Props> = ({
               return (
                 <Link
                   key={page}
-                  href={`/${page}`}
+                  href={`/${lng}/${page}`}
                   className="text-neutral-400 duration-500 hover:scale-105 hover:text-cyan-500"
                 >
                   {t(`${page}.title`)}
