@@ -42,14 +42,14 @@ export const Navigation: React.FC<Props> = ({
             : "bg-neutral-900/500  border-neutral-800 "
         }`}
       >
-        <div className="mx-auto flex flex-row-reverse items-center justify-between px-4 py-6">
+        <div className="mx-auto flex flex-row-reverse items-center justify-between p-6">
           <div className="flex justify-between gap-4">
             {pages.map((page) => {
               return (
                 <Link
                   key={page}
                   href={`/${lng}/${page}`}
-                  className="text-neutral-400 duration-500 hover:scale-105 hover:text-cyan-500"
+                  className="text-neutral-400 duration-500 hover:scale-105 hover:text-primary"
                 >
                   {t(`${page}.title`)}
                 </Link>
@@ -59,7 +59,7 @@ export const Navigation: React.FC<Props> = ({
 
           <Link
             href="/"
-            className="text-neutral-400 duration-500 hover:scale-105 hover:text-cyan-500"
+            className="text-neutral-400 duration-500 hover:scale-105 hover:text-primary"
           >
             <ArrowLeft className="h-6 w-6 " />
           </Link>

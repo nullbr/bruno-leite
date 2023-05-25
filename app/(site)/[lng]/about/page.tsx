@@ -14,7 +14,7 @@ const Page = async ({ params: { lng } }: PageProps) => {
       <Navigation lng={lng} pages={["projects", "contact"]} />
       <PageLayout>
         {/* title */}
-        <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl">
+        <h2 className="title-gradient text-3xl font-bold tracking-tight sm:text-4xl">
           {t("about.title")}
         </h2>
 
@@ -26,15 +26,14 @@ const Page = async ({ params: { lng } }: PageProps) => {
 
         <div className="my-6 flex items-center justify-center gap-4">
           {tools.map((t) => (
-            <>
-              <Link
-                href={t.href}
-                target="_blank"
-                className="duration-500 hover:scale-110 hover:text-cyan-500"
-              >
-                <Image src={t.icon} alt={t.alt} width={30} height={30} />
-              </Link>
-            </>
+            <Link
+              href={t.href}
+              key={t.href}
+              target="_blank"
+              className="duration-500 hover:scale-110 hover:text-primary"
+            >
+              <Image src={t.icon} alt={t.alt} width={30} height={30} />
+            </Link>
           ))}
         </div>
       </PageLayout>

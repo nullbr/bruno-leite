@@ -67,15 +67,14 @@ export default async function Home({ params: { lng } }: PageProps) {
 
           <div className="my-6 flex items-center justify-center gap-4">
             {socials.map((s) => (
-              <>
-                <Link
-                  href={s.href}
-                  target="_blank"
-                  className="duration-500 hover:scale-105 hover:text-primary"
-                >
-                  <span>{s.icon}</span>{" "}
-                </Link>
-              </>
+              <Link
+                href={s.href}
+                key={s.href}
+                target="_blank"
+                className="duration-500 hover:scale-105 hover:text-primary"
+              >
+                <span>{s.icon}</span>{" "}
+              </Link>
             ))}
           </div>
           <LngSwitcher lng={lng} />
