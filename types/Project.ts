@@ -14,6 +14,7 @@ export type Project = {
   repoUrl: string;
   viewUrl: string;
   content: Content;
+  stack: Array<string>;
   featured: boolean;
   main: boolean;
   date: string;

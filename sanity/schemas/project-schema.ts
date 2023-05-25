@@ -58,6 +58,97 @@ const project = {
       ],
     },
     {
+      name: "stack",
+      title: "Tech Stack",
+      type: "array",
+      of: [{ type: "string" }],
+      options: {
+        list: [
+          {
+            title: "Ruby",
+            value:
+              "https://github.com/devicons/devicon/raw/master/icons/ruby/ruby-plain.svg",
+          },
+          {
+            title: "Rspec",
+            value:
+              "https://github.com/devicons/devicon/raw/master/icons/rspec/rspec-original.svg",
+          },
+          {
+            title: "Javascript",
+            value:
+              "https://github.com/devicons/devicon/raw/master/icons/javascript/javascript-original.svg",
+          },
+          {
+            title: "Typescript",
+            value:
+              "https://github.com/devicons/devicon/raw/master/icons/typescript/typescript-plain.svg",
+          },
+          {
+            title: "Tailwindcss",
+            value:
+              "https://github.com/devicons/devicon/raw/master/icons/tailwindcss/tailwindcss-plain.svg",
+          },
+          {
+            title: "ReactJs",
+            value:
+              "https://github.com/devicons/devicon/raw/master/icons/react/react-original.svg",
+          },
+          {
+            title: "NextJs",
+            value:
+              "https://github.com/devicons/devicon/raw/master/icons/nextjs/nextjs-original.svg",
+          },
+          {
+            title: "Ruby on Rails",
+            value:
+              "https://raw.githubusercontent.com/devicons/devicon/master/icons/rails/rails-plain.svg",
+          },
+          {
+            title: "Postgresql",
+            value:
+              "https://github.com/devicons/devicon/raw/master/icons/postgresql/postgresql-plain.svg",
+          },
+          {
+            title: "HTML5",
+            value:
+              "https://github.com/devicons/devicon/raw/master/icons/html5/html5-plain.svg",
+          },
+          {
+            title: "CSS3",
+            value:
+              "https://github.com/devicons/devicon/raw/master/icons/css3/css3-plain.svg",
+          },
+          {
+            title: "SCSS",
+            value:
+              "https://github.com/devicons/devicon/raw/master/icons/sass/sass-original.svg",
+          },
+          {
+            title: "Docker",
+            value:
+              "https://github.com/devicons/devicon/raw/master/icons/docker/docker-plain.svg",
+          },
+          {
+            title: "Python",
+            value:
+              "https://github.com/devicons/devicon/raw/master/icons/python/python-plain.svg",
+          },
+
+          {
+            title: "Fast API",
+            value:
+              "https://github.com/devicons/devicon/raw/master/icons/fastapi/fastapi-plain.svg",
+          },
+          {
+            title: "Redis",
+            value:
+              "https://github.com/devicons/devicon/raw/master/icons/redis/redis-plain.svg",
+          },
+        ],
+      },
+    },
+    {
       name: "date",
       title: "Release Date",
       type: "date",

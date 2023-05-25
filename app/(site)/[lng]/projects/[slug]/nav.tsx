@@ -36,11 +36,7 @@ const Nav: React.FC<Props> = ({ views, lng }) => {
           <div className="flex justify-between gap-8">
             <span
               title="View counter for this page"
-              className={`flex items-center gap-1 duration-200 hover:font-medium ${
-                isIntersecting
-                  ? " text-neutral-400 hover:text-neutral-100"
-                  : "text-neutral-600 hover:text-neutral-900"
-              } `}
+              className="flex items-center gap-1 text-neutral-400"
             >
               <Eye className="h-5 w-5" />{" "}
               {Intl.NumberFormat("en-US", { notation: "compact" }).format(
@@ -48,23 +44,13 @@ const Nav: React.FC<Props> = ({ views, lng }) => {
               )}
             </span>
             <Link target="_blank" href="https://github.com/nullbr">
-              <Github
-                className={`h-6 w-6 duration-200 hover:font-medium ${
-                  isIntersecting
-                    ? " text-neutral-400 hover:text-neutral-100"
-                    : "text-neutral-600 hover:text-neutral-900"
-                } `}
-              />
+              <Github className="h-6 w-6 text-neutral-400 duration-500 hover:scale-105 hover:text-primary" />
             </Link>
           </div>
 
           <Link
             href={`/${lng}/projects`}
-            className={`duration-200 hover:font-medium ${
-              isIntersecting
-                ? " text-neutral-400 hover:text-neutral-100"
-                : "text-neutral-600 hover:text-neutral-900"
-            } `}
+            className="text-neutral-400 duration-500 hover:scale-105 hover:text-primary"
           >
             <ArrowLeft className="h-6 w-6 " />
           </Link>

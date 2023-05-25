@@ -14,6 +14,7 @@ export async function getProjects(): Promise<Project[]> {
       repoUrl,
       viewUrl,
       content,
+      stack,
       featured,
       main,
       date
@@ -32,6 +33,7 @@ export async function getProject(slug: string): Promise<Project> {
       repoUrl,
       viewUrl,
       content,
+      stack,
       featured,
       main,
       date
