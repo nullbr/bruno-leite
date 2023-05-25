@@ -11,7 +11,9 @@ import { Article } from "./article";
 import { Redis } from "@upstash/redis";
 
 const redis = Redis.fromEnv();
+
 export const revalidate = 60;
+export const dynamic = "auto";
 
 const Page = async ({ params: { lng } }: PageProps) => {
   const { t } = await useTranslation(lng);
@@ -46,7 +48,7 @@ const Page = async ({ params: { lng } }: PageProps) => {
       <Navigation lng={lng} pages={["about", "contact"]} wide={true} />
 
       <div className="mx-auto max-w-7xl animate-fade-right space-y-8 px-6 pb-24 pt-24 md:space-y-16 lg:px-8 lg:pb-8 lg:pt-32">
-        <div className="mx-auto max-w-2xl lg:mx-0">
+        <header className="max-w-2xl">
           {/* title */}
           <h2 className="title-gradient text-3xl font-bold tracking-tight sm:text-4xl">
             {t("projects.title")}
@@ -54,7 +56,7 @@ const Page = async ({ params: { lng } }: PageProps) => {
 
           {/* content */}
           <p className="text-neutral-400">{t("projects.description")}</p>
-        </div>
+        </header>
 
         {/* division */}
         <div className="h-px w-full bg-neutral-800" />
@@ -88,11 +90,11 @@ const Page = async ({ params: { lng } }: PageProps) => {
 
                   <h2
                     id="featured-post"
-                    className="title-gradient my-4 font-display text-3xl font-bold duration-1000 group-hover:text-neutral-400 sm:text-4xl"
+                    className="title-gradient my-4 font-display text-xl font-bold duration-1000 group-hover:text-neutral-400 lg:text-3xl"
                   >
                     {mainProject.name}
                   </h2>
-                  <div className="mt-4 pb-10 leading-8 text-neutral-400 duration-150 group-hover:text-neutral-300">
+                  <div className="mt-4 leading-8 text-neutral-400 duration-150 group-hover:text-neutral-300 lg:pb-10">
                     <PortableText
                       value={
                         lng === "en"
@@ -116,7 +118,11 @@ const Page = async ({ params: { lng } }: PageProps) => {
                 .filter((p) => p !== mainProject)
                 .map((project) => (
                   <Card key={project._id}>
-                    <Article project={project} views={0} lng={lng} />
+                    <Article
+                      project={project}
+                      views={views[project.slug] ?? 0}
+                      lng={lng}
+                    />
                   </Card>
                 ))}
             </div>
@@ -130,7 +136,11 @@ const Page = async ({ params: { lng } }: PageProps) => {
               .filter((_, i) => i % 3 === 0)
               .map((project) => (
                 <Card key={project.slug}>
-                  <Article project={project} views={0} lng={lng} />
+                  <Article
+                    project={project}
+                    views={views[project.slug] ?? 0}
+                    lng={lng}
+                  />
                 </Card>
               ))}
           </div>
@@ -139,7 +149,11 @@ const Page = async ({ params: { lng } }: PageProps) => {
               .filter((_, i) => i % 3 === 1)
               .map((project) => (
                 <Card key={project.slug}>
-                  <Article project={project} views={0} lng={lng} />
+                  <Article
+                    project={project}
+                    views={views[project.slug] ?? 0}
+                    lng={lng}
+                  />
                 </Card>
               ))}
           </div>
@@ -148,7 +162,11 @@ const Page = async ({ params: { lng } }: PageProps) => {
               .filter((_, i) => i % 3 === 2)
               .map((project) => (
                 <Card key={project.slug}>
-                  <Article project={project} views={0} lng={lng} />
+                  <Article
+                    project={project}
+                    views={views[project.slug] ?? 0}
+                    lng={lng}
+                  />
                 </Card>
               ))}
           </div>
