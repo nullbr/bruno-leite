@@ -7,7 +7,7 @@ import React, { useEffect, useRef, useState } from "react";
 
 interface Props {
   lng: string;
-  pages: Array<"about" | "contact" | "projects">;
+  pages: Array<"home" | "about" | "contact" | "projects">;
   wide?: boolean;
 }
 

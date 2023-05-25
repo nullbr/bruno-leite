@@ -32,24 +32,17 @@ export default async function Home({ params: { lng } }: PageProps) {
       <div className="flex h-screen w-screen flex-col items-center justify-center overflow-hidden">
         <nav className="mb-16 mt-4 animate-fade-in">
           <ul className="flex items-center justify-center gap-4">
-            <Link
-              href="/about"
-              className="text-sm text-neutral-400 duration-500 hover:scale-105 hover:text-primary"
-            >
-              {t("about.title")}
-            </Link>
-            <Link
-              href="/projects"
-              className="text-sm text-neutral-400 duration-500 hover:scale-105 hover:text-primary"
-            >
-              {t("projects.title")}
-            </Link>
-            <Link
-              href="/contact"
-              className="text-sm text-neutral-400 duration-500 hover:scale-105 hover:text-primary"
-            >
-              {t("contact.title")}
-            </Link>
+            {["about", "projects", "contact"].map((page) => {
+              return (
+                <Link
+                  key={page}
+                  href={`/${lng}/${page}`}
+                  className="text-neutral-400 duration-500 hover:scale-105 hover:text-primary"
+                >
+                  {t(`${page}.title`)}
+                </Link>
+              );
+            })}
           </ul>
         </nav>
 

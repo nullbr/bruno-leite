@@ -10,7 +10,8 @@
   "projects": {
     "title": "Projetos",
     "description": "Confira alguns de meus projetos pessoais e profissionais. Os repositórios estão disponíveis no github e visualize a versão de produção.",
-    "readMore": "Ler mais"
+    "readMore": "Ler mais",
+    "demo": "Demo"
   },
   "contact": {
     "title": "Contato"
