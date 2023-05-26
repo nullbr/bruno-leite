@@ -2,12 +2,12 @@ import { getProject } from "@/sanity/sanity-utils";
 import { PortableText } from "@portabletext/react";
 import Image from "next/image";
 import ReportView from "./reportView";
-import { Redis } from "@upstash/redis";
 import { notFound } from "next/navigation";
 import Nav from "./nav";
 import Link from "next/link";
+import { getProjectViews } from "@/utils/redis";
 
-const redis = Redis.fromEnv();
+export const revalidate = 60;
 
 type Props = {
   params: { slug: string; lng: string };
@@ -16,16 +16,10 @@ type Props = {
 const Project = async ({ params }: Props) => {
   const { slug, lng } = params;
 
-  async function getViews(slug: string): Promise<number | null> {
-    redis.get(["pageViews", "projects", slug].join(":"));
-
-    return redis.get(["pageViews", "projects", slug].join(":"));
-  }
-
   // get project and views
   const [project, views] = await Promise.all([
     getProject(slug),
-    getViews(slug),
+    getProjectViews(slug),
   ]);
 
   if (Object.keys(project).length === 0) {
@@ -36,7 +30,7 @@ const Project = async ({ params }: Props) => {
   if (project.repoUrl) {
     links.push({
       label: "GitHub",
-      href: `https://github.com/${project.repoUrl}`,
+      href: project.repoUrl,
     });
   }
   if (project.viewUrl) {

@@ -2,12 +2,8 @@ import { getProjects } from "@/sanity/sanity-utils";
 import { useTranslation } from "@/app/i18n";
 import { PageProps } from "@/types/PageProps";
 import { Navigation } from "@/app/components/Navigation";
-import { Redis } from "@upstash/redis";
 import Projects from "./projects";
-
-const redis = Redis.fromEnv();
-
-export const revalidate = 60;
+import { getAllViews } from "@/utils/redis";
 
 const Page = async ({ params: { lng } }: PageProps) => {
   const { t } = await useTranslation(lng);
@@ -16,15 +12,7 @@ const Page = async ({ params: { lng } }: PageProps) => {
   const projects = await getProjects();
 
   // get project views count
-  const views = (
-    await redis.mget<number[]>(
-      ...projects.map((p) => ["pageViews", "projects", p.slug].join(":"))
-    )
-  ).reduce((acc, v, i) => {
-    acc[projects[i].slug] = v ?? 0;
-
-    return acc;
-  }, {} as Record<string, number>);
+  const views = await getAllViews(projects);
 
   return (
     <>

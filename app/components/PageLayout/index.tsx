@@ -6,7 +6,7 @@ export const PageLayout = ({
   cls?: string;
 }) => {
   return (
-    <div className="mx-auto min-h-screen max-w-3xl animate-fade-right whitespace-pre-line px-4 py-20 text-neutral-400">
+    <div className="mx-auto min-h-screen max-w-3xl animate-fade-right whitespace-pre-line px-6 py-20 text-neutral-400">
       {children}
     </div>
   );
