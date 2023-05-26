@@ -1,7 +1,7 @@
 import { getProjects } from "@/sanity/sanity-utils";
 import { useTranslation } from "@/app/i18n";
 import { PageProps } from "@/types/PageProps";
-import { Navigation } from "@/app/components/Navigation";
+import Navigation from "@/app/components/Navigation";
 import Projects from "./projects";
 import { getAllViews } from "@/utils/redis";
 
@@ -16,7 +16,7 @@ const Page = async ({ params: { lng } }: PageProps) => {
 
   return (
     <>
-      <Navigation lng={lng} pages={["about", "contact"]} wide={true} />
+      <Navigation lng={lng} pages={["home", "about", "contact"]} wide={true} />
 
       <div className="mx-auto max-w-7xl animate-fade-right space-y-8 px-6 pb-24 pt-24 md:space-y-16 lg:px-8 lg:pb-8 lg:pt-32">
         <header className="max-w-2xl">

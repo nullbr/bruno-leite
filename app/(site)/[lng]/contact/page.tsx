@@ -1,13 +1,10 @@
 import { Github, Mail, Linkedin } from "lucide-react";
-import { useTranslation } from "@/app/i18n/";
 import { Card } from "../../../components/Card";
 import { PageProps } from "@/types/PageProps";
-import { Navigation } from "@/app/components/Navigation";
+import Navigation from "@/app/components/Navigation";
 import Link from "next/link";
 
 const Page = async ({ params: { lng } }: PageProps) => {
-  const { t } = await useTranslation(lng);
-
   const socials = [
     {
       icon: <Linkedin size={20} />,
@@ -31,7 +28,7 @@ const Page = async ({ params: { lng } }: PageProps) => {
 
   return (
     <>
-      <Navigation lng={lng} pages={["about", "projects"]} wide={true} />
+      <Navigation lng={lng} pages={["home", "about", "projects"]} wide={true} />
 
       <div className="mx-auto flex min-h-screen max-w-7xl animate-fade-right items-center justify-center px-6 pb-20 md:pb-0">
         <div className="mx-auto grid w-full grid-cols-1 gap-8 sm:mt-0 lg:grid-cols-3 xl:gap-16">

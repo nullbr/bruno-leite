@@ -3,6 +3,7 @@
 import { useTranslation } from "@/app/i18n/client";
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import React, { useEffect, useRef, useState } from "react";
 
 interface Props {
@@ -11,12 +12,9 @@ interface Props {
   wide?: boolean;
 }
 
-export const Navigation: React.FC<Props> = ({
-  lng,
-  pages,
-  wide = false,
-}: Props) => {
+const Navigation: React.FC<Props> = ({ lng, pages, wide = false }: Props) => {
   const { t } = useTranslation(lng);
+  const router = useRouter();
 
   const ref = useRef<HTMLElement>(null);
   const [isIntersecting, setIntersecting] = useState(true);
@@ -57,14 +55,17 @@ export const Navigation: React.FC<Props> = ({
             })}
           </div>
 
-          <Link
-            href="/"
+          <button
+            type="button"
+            onClick={() => router.back()}
             className="text-neutral-400 duration-500 hover:scale-105 hover:text-primary"
           >
             <ArrowLeft className="h-6 w-6 " />
-          </Link>
+          </button>
         </div>
       </div>
     </header>
   );
 };
+
+export default Navigation;

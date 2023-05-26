@@ -1,7 +1,7 @@
 import { useTranslation } from "@/app/i18n";
 import { PageLayout } from "../../../components/PageLayout";
 import { PageProps } from "@/types/PageProps";
-import { Navigation } from "@/app/components/Navigation";
+import Navigation from "@/app/components/Navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { tools } from "./tools";
@@ -11,7 +11,7 @@ const Page = async ({ params: { lng } }: PageProps) => {
 
   return (
     <>
-      <Navigation lng={lng} pages={["projects", "contact"]} />
+      <Navigation lng={lng} pages={["home", "projects", "contact"]} />
       <PageLayout>
         {/* title */}
         <h2 className="title-gradient text-3xl font-bold tracking-tight sm:text-4xl">

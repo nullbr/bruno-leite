@@ -32,7 +32,7 @@ const Nav: React.FC<Props> = ({ views, lng }) => {
             : "bg-neutral-900/500  border-neutral-800 "
         }`}
       >
-        <div className="mx-auto flex flex-row-reverse items-center justify-between p-6">
+        <div className="mx-auto flex max-w-3xl flex-row-reverse items-center justify-between p-6">
           <div className="flex justify-between gap-8">
             <span
               title="View counter for this page"
