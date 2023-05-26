@@ -9,24 +9,6 @@ module.exports = {
       colors: {
         primary: "#11bcc7",
       },
-      typography: {
-        DEFAULT: {
-          css: {
-            "code::before": {
-              content: '""',
-            },
-            "code::after": {
-              content: '""',
-            },
-          },
-        },
-        quoteless: {
-          css: {
-            "blockquote p:first-of-type::before": { content: "none" },
-            "blockquote p:first-of-type::after": { content: "none" },
-          },
-        },
-      },
       fontFamily: {
         sans: ["var(--font-inter)", ...defaultTheme.fontFamily.sans],
         display: ["var(--font-calsans)"],
