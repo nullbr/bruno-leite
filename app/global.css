@@ -20,15 +20,3 @@
     hover:text-white;
   }
 }
-
-@layer utilities {
-  .blur-bg {
-    background-color: rgba(
-      226,
-      232,
-      240,
-      0.6
-    ); /* Set the background color with transparency */
-    backdrop-filter: blur(8px); /* Add a blur filter to the navbar */
-  }
-}
