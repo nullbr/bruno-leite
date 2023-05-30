@@ -1,4 +1,4 @@
-import "../../global.css";
+import "../global.css";
 import { Analytics } from "../components/Analytics";
 import { dir } from "i18next";
 import { languages } from "@/app/i18n/settings";
@@ -64,7 +64,7 @@ const inter = Inter({
 });
 
 const calSans = LocalFont({
-  src: "../../../public/fonts/CalSans-SemiBold.ttf",
+  src: "../../public/fonts/CalSans-SemiBold.ttf",
   variable: "--font-calsans",
 });
 
