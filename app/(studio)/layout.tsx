@@ -1,11 +1,54 @@
-import { Inter } from "next/font/google";
 import "../global.css";
 import { Analytics } from "../components/Analytics";
-import { data } from "@/utils/metadata";
+import { Metadata } from "next";
 
-const inter = Inter({ subsets: ["latin"] });
-
-export const metadata = data;
+export const metadata: Metadata = {
+  title: {
+    default: "nullbr",
+    template: "%s | nullbr",
+  },
+  description: "Bruno Leite - Full Stack Developer",
+  metadataBase: new URL("https://bruno.buzz"),
+  alternates: {
+    canonical: "/",
+    languages: {
+      "en-US": "/en",
+      "pt-BR": "/pt",
+    },
+  },
+  openGraph: {
+    title: "nullbr",
+    description: "Bruno Leite - Full Stack Developer",
+    url: "https://bruno.buzz",
+    siteName: "bruno.buzz",
+    images: [
+      {
+        url: "https://bruno.buzz/og.png",
+        width: 1920,
+        height: 1080,
+      },
+    ],
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  twitter: {
+    title: "nullbr",
+    card: "summary_large_image",
+  },
+  icons: {
+    shortcut: "/favicon.png",
+  },
+};
 
 export default function RootLayout({
   children,
@@ -17,7 +60,7 @@ export default function RootLayout({
       <head>
         <Analytics />
       </head>
-      <body className={inter.className}>
+      <body>
         <main>{children}</main>
       </body>
     </html>
