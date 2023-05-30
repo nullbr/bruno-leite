@@ -46,7 +46,7 @@ const Project = async ({ params }: Props) => {
 
       <Nav views={views || 0} lng={lng} />
 
-      <div className="min-h-screen bg-neutral-100">
+      <div className="min-h-[100svh] bg-neutral-100">
         <header className="w-screen bg-black bg-gradient-to-bl from-black via-cyan-800/30 to-black pt-20">
           <div className="mx-auto flex max-w-3xl animate-fade-right flex-col items-center whitespace-pre-line px-6 pb-10 text-center text-neutral-400">
             <div className="mx-auto max-w-2xl lg:mx-0">
