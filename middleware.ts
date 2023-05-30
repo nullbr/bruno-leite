@@ -14,7 +14,9 @@ const cookieName = "i18next";
 export function middleware(req: NextRequest) {
   if (
     req.nextUrl.pathname.startsWith(`/admin`) ||
-    req.nextUrl.pathname.startsWith(`/api`)
+    req.nextUrl.pathname.startsWith(`/api`) ||
+    req.nextUrl.pathname.startsWith(`/og`) ||
+    req.nextUrl.pathname.startsWith(`/favicon`)
   )
     return;
 
