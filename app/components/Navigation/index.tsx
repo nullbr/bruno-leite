@@ -46,7 +46,7 @@ const Navigation: React.FC<Props> = ({ lng, pages, wide = false }: Props) => {
               return (
                 <Link
                   key={page}
-                  href={`/${lng}/${page}`}
+                  href={`/${lng}/${page === "home" ? "" : page}`}
                   className="text-neutral-400 duration-500 hover:scale-105 hover:text-primary"
                 >
                   {t(`${page}.title`)}
