@@ -1,6 +1,14 @@
-import "../global.css";
+import "../../global.css";
 import { Analytics } from "../components/Analytics";
+import { dir } from "i18next";
+import { languages } from "@/app/i18n/settings";
 import { Metadata } from "next";
+import { Inter } from "next/font/google";
+import LocalFont from "next/font/local";
+
+export async function generateStaticParams() {
+  return languages.map((lng) => ({ lng }));
+}
 
 export const metadata: Metadata = {
   title: {
@@ -50,19 +58,36 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+});
+
+const calSans = LocalFont({
+  src: "../../../public/fonts/CalSans-SemiBold.ttf",
+  variable: "--font-calsans",
+});
+
+export default async function RootLayout({
   children,
+  params: { lng },
 }: {
   children: React.ReactNode;
+  params: {
+    lng: string;
+  };
 }) {
   return (
-    <html lang="en">
+    <html
+      className={[inter.variable, calSans.variable].join(" ")}
+      lang={lng}
+      dir={dir(lng)}
+    >
       <head>
         <Analytics />
       </head>
-      <body>
-        <main>{children}</main>
-      </body>
+
+      <body>{children}</body>
     </html>
   );
 }
