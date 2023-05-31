@@ -26,7 +26,7 @@ const Nav: React.FC<Props> = ({ views, lng }) => {
   return (
     <header ref={ref}>
       <div
-        className={`fixed inset-x-0 top-0 z-50 mx-auto max-w-7xl animate-fade-left border-b backdrop-blur duration-200 ${
+        className={`fixed inset-x-0 top-0 z-50 animate-fade-left border-b backdrop-blur duration-200 ${
           isIntersecting
             ? "border-transparent bg-neutral-900/0"
             : "bg-neutral-900/500  border-neutral-800 "

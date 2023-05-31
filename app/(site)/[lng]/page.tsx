@@ -29,7 +29,7 @@ export default async function Home({ params: { lng } }: PageProps) {
 
   return (
     <>
-      <div className="flex h-screen w-screen flex-col items-center justify-center overflow-hidden">
+      <div className="flex h-[100svh] flex-col items-center justify-center overflow-hidden">
         <nav className="mb-16 mt-4 animate-fade-in">
           <ul className="flex items-center justify-center gap-4">
             {["about", "projects", "contact"].map((page) => {
@@ -56,7 +56,7 @@ export default async function Home({ params: { lng } }: PageProps) {
 
         <div className="mb-4 mt-16 animate-fade-in text-center text-neutral-400">
           {/* Description */}
-          <h2 className="max-w-2xl px-2 text-base">{t("home.description")}</h2>
+          <h2 className="max-w-2xl px-4 text-base">{t("home.description")}</h2>
 
           <div className="my-6 flex items-center justify-center gap-4">
             {socials.map((s) => (

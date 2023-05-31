@@ -53,7 +53,7 @@ const Project = async ({ params }: Props) => {
               <h1 className="title-gradient font-display text-4xl font-bold tracking-tight sm:text-6xl">
                 {project.name}
               </h1>
-              <div className="mt-6 text-lg leading-8 text-neutral-300">
+              <div className="mt-6 text-start text-lg leading-8 text-neutral-300 md:text-center">
                 <PortableText
                   value={lng === "en" ? project.content.en : project.content.pt}
                 />
@@ -61,7 +61,7 @@ const Project = async ({ params }: Props) => {
             </div>
 
             <div className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
-              <div className="grid grid-cols-2 gap-x-8 gap-y-6 text-base font-semibold leading-7 text-white md:flex lg:gap-x-10">
+              <div className="grid gap-x-8 gap-y-6 text-base font-semibold leading-7 text-white md:flex lg:gap-x-10">
                 {links.map((link) => (
                   <Link
                     target="_blank"

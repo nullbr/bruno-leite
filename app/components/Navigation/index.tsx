@@ -32,15 +32,17 @@ const Navigation: React.FC<Props> = ({ lng, pages, wide = false }: Props) => {
   return (
     <header ref={ref}>
       <div
-        className={`fixed inset-x-0 top-0 z-50 mx-auto animate-fade-left border-b backdrop-blur duration-200 ${
-          wide ? "max-w-7xl" : "max-w-3xl"
-        } ${
+        className={`fixed inset-x-0 top-0 z-50 animate-fade-left border-b backdrop-blur duration-200  ${
           isIntersecting
             ? "border-transparent bg-neutral-900/0"
             : "bg-neutral-900/500  border-neutral-800 "
         }`}
       >
-        <div className="mx-auto flex flex-row-reverse items-center justify-between p-6">
+        <div
+          className={`mx-auto flex flex-row-reverse items-center justify-between p-6 ${
+            wide ? "max-w-7xl" : "max-w-3xl"
+          }`}
+        >
           <div className="flex justify-between gap-4">
             {pages.map((page) => {
               return (
