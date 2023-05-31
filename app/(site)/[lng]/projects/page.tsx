@@ -27,11 +27,11 @@ const Page = async ({ params: { lng } }: PageProps) => {
             </h2>
 
             {/* content */}
-            <p className="text-neutral-400">{t("projects.description")}</p>
+            <p className="mt-2 text-neutral-400">{t("projects.description")}</p>
           </header>
 
           {/* division */}
-          <div className="h-px w-full bg-neutral-800" />
+          <div className="mt-6 h-px w-full bg-neutral-800" />
         </div>
 
         <Projects allProjects={projects} views={views} lng={lng} t={t} />
