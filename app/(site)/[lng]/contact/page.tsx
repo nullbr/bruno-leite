@@ -47,7 +47,7 @@ const Page = async ({ params: { lng } }: PageProps) => {
                   {s.icon}
                 </span>{" "}
                 <div className="z-10 flex flex-col items-center">
-                  <span className="font-display text-xl font-medium text-neutral-200 duration-150 group-hover:text-white xl:text-3xl">
+                  <span className="break-words font-display text-xl font-medium text-neutral-200 duration-150 group-hover:text-white xl:text-2xl">
                     {s.handle}
                   </span>
                   <span className="mt-4 text-center text-sm text-neutral-400 duration-1000 group-hover:text-neutral-200">
