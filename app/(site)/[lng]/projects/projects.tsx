@@ -26,7 +26,7 @@ const Projects: React.FC<Props> = ({ allProjects, views, lng, t }) => {
   );
 
   return (
-    <div className="animate-fade-up">
+    <>
       {featuredProjects.length > 1 && (
         <div className="mx-auto grid grid-cols-1 gap-8 lg:grid-cols-2">
           <Card>
@@ -136,7 +136,7 @@ const Projects: React.FC<Props> = ({ allProjects, views, lng, t }) => {
             ))}
         </div>
       </div>
-    </div>
+    </>
   );
 };
 export default Projects;
