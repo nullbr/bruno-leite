@@ -77,7 +77,7 @@ const Project = async ({ params }: Props) => {
           </div>
         </header>
 
-        <div className="mx-auto h-screen max-w-3xl animate-fade-right py-10 text-center">
+        <div className="mx-auto max-w-3xl animate-fade-right py-10 text-center">
           {/* Tech Stack */}
           <div className="mx-auto flex max-w-3xl flex-wrap items-center justify-center gap-4 px-6 pb-10">
             {project.stack.map((tech) => {
@@ -95,7 +95,7 @@ const Project = async ({ params }: Props) => {
               alt={slug}
               width={1920}
               height={1080}
-              priority={true}
+              loading="lazy"
               className="rounded-xl object-cover"
             />
           </div>
