@@ -4,13 +4,9 @@ import { Github, Mail, Linkedin } from "lucide-react";
 import LngSwitcher from "../../components/LngSwitcher/client";
 import { useTranslation } from "@/app/i18n/";
 import { PageProps } from "@/types/PageProps";
-import { getPages } from "@/sanity/sanity-utils";
 
 export default async function Home({ params: { lng } }: PageProps) {
   const { t } = await useTranslation(lng);
-
-  // get all configured pages
-  const pages = await getPages();
 
   const socials = [
     {
@@ -48,8 +44,8 @@ export default async function Home({ params: { lng } }: PageProps) {
 
         <div className="animate-glow hidden h-px w-screen animate-fade-left md:block" />
 
-        <h1 className="title-gradient text-edge-outline z-10 animate-title cursor-default whitespace-nowrap font-display text-[6rem] duration-1000 sm:text-[8rem] md:text-[10rem] ">
-          nullbr
+        <h1 className="title-gradient text-edge-outline z-10 animate-title cursor-default whitespace-nowrap font-display text-[4rem] duration-1000 sm:text-[8rem] md:text-[10rem] ">
+          Bruno Leite
         </h1>
 
         <div className="animate-glow hidden h-px w-screen animate-fade-right md:block" />
