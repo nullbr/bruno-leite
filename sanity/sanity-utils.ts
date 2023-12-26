@@ -1,7 +1,8 @@
 import { Project } from "@/types/Project";
-import { createClient, groq } from "next-sanity";
+import { groq } from "next-sanity";
 import config from "./config/client-config";
 import { Page } from "@/types/Page";
+import { createClient } from "@sanity/client";
 
 export async function getProjects(): Promise<Project[]> {
   return createClient(config).fetch(

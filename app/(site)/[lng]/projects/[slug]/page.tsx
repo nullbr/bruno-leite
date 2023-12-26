@@ -82,7 +82,10 @@ const Project = async ({ params }: Props) => {
           <div className="mx-auto flex max-w-3xl flex-wrap items-center justify-center gap-4 px-6 pb-10">
             {project.stack.map((tech) => {
               return (
-                <div className="duration-500 hover:scale-110 hover:text-primary">
+                <div
+                  className="duration-500 hover:scale-110 hover:text-primary"
+                  key={tech}
+                >
                   <Image src={tech} alt={tech} width={30} height={30} />
                 </div>
               );
